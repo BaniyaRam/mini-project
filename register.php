@@ -1,3 +1,24 @@
+<?php
+session_start();
+require_once './db.inc.php';
+if (isset($_POST['registration'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
+
+    $query = "INSERT INTO users (username, email, `password`, phone_number) VALUES ('$username', '$email', '$password', '$phone_number');";
+    print_r($query);
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        echo "<script>alert('Register Successfull')</script>";
+        sleep(3);
+        header('Location: index.php');
+    } else {
+        echo "Failed";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,30 +49,7 @@
         <label for="re_password">Repeat Password</label>
         <input type="password" name="re_password" placeholder="Enter password">
     </div>
-    <br><input type="submit" name="registration">
+    <br><input type="submit" name="registration" value="Register">
    </form> 
 </body>
 </html>
-
-<?php
-session_start();
-include './db.inc.php';
-if(isset($_POST['registration'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-    $phone_number = $_POST['phone_number'];
-
-    $query = "INSERT INTO users (username, email, `password`) VALUES ('$username', '$email', '$password', $phone_number)";
-    $result = mysqli_query($conn, $query);
-    if($result){
-        echo "<script>alert('Register Successfull')</script>";
-        sleep(3); 
-        header('Location: http://localhost/project/index.php');
-    } else {
-        echo "Failed";
-    }
-
-
-}
-?>

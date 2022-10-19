@@ -32,29 +32,27 @@
 session_start();
 include_once 'db.inc.php';
 
-if(isset($_POST['login_submit'])){
+if (isset($_POST['login_submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM users where email='$email';";
     $result = mysqli_query($conn, $sql);
 
-    if(mysqli_num_rows($result) > 0){
-        while($row=mysqli_fetch_assoc($result)){
-            if(($row['password']) == $password){
-                $_SESSION['email'] = $row['email'];
+    if (mysqli_num_rows($result) > 0) {
+        while ($row=mysqli_fetch_assoc($result)) {
+            if (($row['password']) == $password) {
+                $_SESSION['id'] = $row['id'];
                 $_SESSION['username'] = $row['username'];
                 echo '<script>alert("Login Successfully")</script>';
                 sleep(2);
-                header('Location: http://localhost/project/index.php');
-            }else {
+                header('Location: index.php');
+            } else {
                 echo "Incorrect password";
             }
         }
-    }else {
+    } else {
         echo "user not found";
     }
-
-
 }
 ?>

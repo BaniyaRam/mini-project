@@ -1,0 +1,31 @@
+
+   * body{
+        background-color:brown;
+    }
+    h4{
+        color: aliceblue;
+        text-align: center;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    .map{
+        text-align: center;
+    }
+    .desc .name{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .desc .oph{
+        font-size: 22px;
+        font-weight: bold;
+
+
+    }
+    .desc label{
+        font-size:22px;
+        font-weight: bold;
+    }
+    .name{
+        font-weight: bold;
+    }

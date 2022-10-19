@@ -1,34 +1,4 @@
-.btbox {
-    /* visibility: hidden; */
-    display: none;
-}
-.btlabel{
-    margin: 27px;
-}
-
-.btlabel:hover {
-    background-color: rgb(6, 6, 6);
-    color: #fff;
-}
-
-select:focus {
-    outline: none;
-}
-
-.bookingTimes {
-  display:inline-block;
-  vertical-align:top;
-  overflow:hidden;
-}
-
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: 0;
-  padding:10px;
-  margin:-5px -20px -5px -5px;
-}
-select option {
-  display:inline-block;
+.strike {
+  color: red;
+  text-decoration: line-through;
 }

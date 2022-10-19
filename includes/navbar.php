@@ -1,7 +1,6 @@
-<?
+<?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +8,7 @@ session_start();
       <link rel="stylesheet" href="./css/styles.css">
       <script src="./js/script.js" defer></script>
       <script src="./js/navbar.js" defer></script>
+      <link rel="stylesheet" href="./css/navbar.css">
       <title>Responsive Navbar</title>
     </head>
     <body>
@@ -23,17 +23,22 @@ session_start();
           <ul>
             <li><a href="https://www.facebook.com/mirasfutsal" target="_blank">OUR FACEBOOK</a></li>
             <li><a href="#">HOME</a></li>
-            <li><a href="booking.php">BOOKINGS</a></li>
-            
-            <li><a href="#">LIVE EVENTS</a></li>
-            <li><a href="contact-us.php">CONTACT US</a></li>
             <?php
-            if(!isset($_SESSION["login"])){
-              echo '<li><a id="login-btn" href="login.php">LOGIN</a></li>';
-            }else {
-              echo '<li><a id="logout-btn" href="logout.php">LOGOUT</a></li>';
+            if (isset($_SESSION['username'])) {
+                echo '<li><a href="booking.php">BOOKINGS</a></li>';
             }
-            ?>
+?>
+            <li><a href="#">LIVE EVENTS</a></li>
+            <li><a href="contactus.php">CONTACT US</a></li>
+            <?php
+if (!isset($_SESSION["username"])) {
+    echo '
+    <li><a id="login-btn" href="login.php">LOGIN</a></li>
+    <li><a id="login-btn" href="register.php">REGISTER</a></li>';
+} else {
+    echo '<li><a id="logout-btn" href="logout.php">LOGOUT</a></li>';
+}
+?>
           </ul>
         </div>
       </nav>
