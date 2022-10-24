@@ -8,12 +8,11 @@ session_start();
       <link rel="stylesheet" href="./css/styles.css">
       <script src="./js/script.js" defer></script>
       <script src="./js/navbar.js" defer></script>
-      <link rel="stylesheet" href="./css/navbar.css">
       <title>Responsive Navbar</title>
     </head>
     <body>
-      <nav class="navbar">
-        <div class="brand-title">MIRAS FUTSAL</div>
+    <nav class="navbar">
+        <div><img class="logo" src = "logo.png"></div>
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -29,7 +28,7 @@ session_start();
             }
 ?>
             <li><a href="#">LIVE EVENTS</a></li>
-            <li><a href="contactus.php">CONTACT US</a></li>
+            <li><a href="contactus.php">ABOUT US</a></li>
             <?php
 if (!isset($_SESSION["username"])) {
     echo '

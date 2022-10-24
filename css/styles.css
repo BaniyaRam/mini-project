@@ -12,13 +12,22 @@ body {
     position: relative;
     justify-content: space-around;
     align-items: center;
-    background-color: #333;
+    background-color:green;
     color: white;
+}
+.logo{
+    height : 65px;
+    width : 65px;
+}
+
+li {
+    margin: 0 20px;
 }
 
 .brand-title {
     font-size: 1.5rem;
     margin: .5rem;
+   
 }
 
 .navbar-links {
