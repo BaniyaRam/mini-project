@@ -1,6 +1,6 @@
 <?php
 include_once './db.inc.php';
-session_start();
+include './includes/navbar.php';
 $id = $_SESSION['id'];
 $query = "SELECT * from booking where user_id=$id";
 $result = mysqli_query($conn, $query);
@@ -12,6 +12,7 @@ $result = mysqli_query($conn, $query);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cart.css">
+    <script src="./js/cart.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -39,11 +40,13 @@ if(mysqli_num_rows($result) > 0){
             <td>$time</td>
             <td>$date</td>
             <td>$status</td>
-            <td><a href='cancel.php'>Cancel</a></td>
+            <td>
+            <button onclick='cancel($booking_id)' class='show_btn'>Cancel</button>
+            </td>
         </tr>";
     }
 }else {
-    echo "error";
+    echo "No Booking";
 }
 ?>
 

@@ -1,10 +1,14 @@
+<link rel="stylesheet" href="./css/booking.css">
+<script src='./js/booking.js' defer></script>
 <?php
 include_once './db.inc.php';
 include './includes/navbar.php';
 if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
+    echo "
+    <button> 
+    <a class='show_btn' href='cart.php'>Show your booking</a>
+    </button>";
     ?>
-<link rel="stylesheet" href="./css/booking.css">
-<script src='./js/booking.js' defer></script>
 <div class="field-container">
 <br><br>
     <form method="post">

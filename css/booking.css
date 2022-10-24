@@ -2,3 +2,8 @@
   color: red;
   text-decoration: line-through;
 }
+
+.show_btn {
+  text-decoration: none;
+  color: black;
+}
