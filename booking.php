@@ -18,36 +18,25 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
         </label><br><br>
         <label>Time</label><br>
         <div class="bookingTimes">
-            <input type="checkbox" name="bookingTime[]" class="btbox bt6" value='6-7am'>
-            <label class="btlabel" >6:00am - 7:00am</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt7" value='7-8am'>
-            <label class="btlabel">7:00am - 8:00am</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt8" value='8-9am'>
-            <label class="btlabel">8:00am - 9:00am</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='9-10am'>
-            <label class="btlabel">9:00am - 10:00am</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='10-11am'>
-            <label class="btlabel">10:00am - 11:00am</label>
-             <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='11-12pm'>
-            <label class="btlabel">11:00am - 12:00pm</label>
-             <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='12-1pm'>
-            <label class="btlabel">12:00pm - 1:00pm</label><br><br>
-             <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='1-2pm'>
-            <label class="btlabel">1:00pm - 2:00pm</label>
-             <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='2-3pm'>
-            <label class="btlabel">2:00pm - 3:00pm</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='3-4pm'>
-            <label class="btlabel">3:00pm - 4:00pm</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='4-5pm'>
-            <label class="btlabel">4:00pm - 5:00pm</label>
-            <input type="checkbox" name="bookingTime[]" class="btbox bt9" value='5-6pm'>
-            <label class="btlabel">5:00pm - 6:00pm</label>
+            <?php
+                date_default_timezone_set('Asia/Kathmandu');
+                $open_time = strtotime("6:00");
+                $close_time = strtotime("19:00");
+                $now = time();
+                for( $i=$open_time; $i<$close_time; $i+=3600) {
+                    if( $i < $now) continue;
+                    echo "<input type='checkbox' name='bookingTime[]' class='btbox' value='$i'/>
+                    <label class='btlabel'>".date('H:i', $i)." - ".date('H:i',$i+3600)."</label>
+                    ";
+                }
+            ?>
         </div>
         <br>
-<input type="submit" value="Book Now" id="book_btn" name="book_btn" disabled="disabled">
+        <input type="submit" value="Book Now" id="book_btn" name="book_btn" disabled="disabled">
         </form>
     </div>
-    <?php } else {
+    <?php 
+    } else {
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
     }
 
