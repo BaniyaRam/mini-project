@@ -6,9 +6,10 @@ session_start();
     <head>
       <link rel="stylesheet" href="background_styles.css">
       <link rel="stylesheet" href="./css/styles.css">
+      <link rel="stylesheet" href="./css/navbar.css">
       <script src="./js/script.js" defer></script>
       <script src="./js/navbar.js" defer></script>
-      <title>Responsive Navbar</title>
+      <title>Home</title>
     </head>
     <body>
     <nav class="navbar">
@@ -32,8 +33,8 @@ session_start();
             <?php
 if (!isset($_SESSION["username"])) {
     echo '
-    <li><a id="login-btn" href="login.php">LOGIN</a></li>
-    <li><a id="login-btn" href="register.php">REGISTER</a></li>';
+    <li><a id="login-btn" href="#">LOGIN</a></li>
+    <li><a id="register-btn" href="#">REGISTER</a></li>';
 } else {
     echo '<li><a id="logout-btn" href="logout.php">LOGOUT</a></li>';
 }
@@ -43,3 +44,5 @@ if (!isset($_SESSION["username"])) {
       </nav>
     </body>
 </html>
+
+

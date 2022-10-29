@@ -7,4 +7,5 @@ check_btn.addEventListener("click", () => {
     }else{
         password.type = "password"
     } 
-})
+});
+
