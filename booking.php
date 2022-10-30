@@ -18,18 +18,21 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
         </label><br><br>
         <label>Time</label><br>
         <div class="bookingTimes">
-            <?php
-                date_default_timezone_set('Asia/Kathmandu');
-                $open_time = strtotime("6:00");
-                $close_time = strtotime("19:00");
-                $now = time();
-                for( $i=$open_time; $i<$close_time; $i+=3600) {
-                    if( $i < $now) continue;
-                    echo "<input type='checkbox' name='bookingTime[]' class='btbox' value='$i'/>
-                    <label class='btlabel'>".date('H:i', $i)." - ".date('H:i',$i+3600)."</label>
-                    ";
-                }
-            ?>
+        <?php
+            date_default_timezone_set('Asia/Kathmandu');
+    $open_time = strtotime("6:00");
+    $close_time = strtotime("19:00");
+    $now = time();
+    for ($i=$open_time; $i<$close_time; $i+=3600) {
+        $schedule_time = date('H:i', $i)." - ".date('H:i', $i+3600);
+        // if( $i < $now) continue;
+        echo "<label class='btlabel' for='bookingTime'>
+                <input type='checkbox' name='bookingTime[]' class='btbox' value='$schedule_time'/>
+                    $schedule_time
+              </label>";
+    }
+    ?>
+
         </div>
         <br>
         <input type="submit" value="Book Now" id="book_btn" name="book_btn" disabled="disabled">

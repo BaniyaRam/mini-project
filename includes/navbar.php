@@ -33,8 +33,8 @@ session_start();
             <?php
 if (!isset($_SESSION["username"])) {
     echo '
-    <li><a id="login-btn" href="#">LOGIN</a></li>
-    <li><a id="register-btn" href="#">REGISTER</a></li>';
+    <li><a id="login-btn" href="login.php">LOGIN</a></li>
+    <li><a id="register-btn" href="register.php">REGISTER</a></li>';
 } else {
     echo '<li><a id="logout-btn" href="logout.php">LOGOUT</a></li>';
 }
