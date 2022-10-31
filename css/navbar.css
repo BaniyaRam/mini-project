@@ -3,12 +3,23 @@
     position: relative;
     justify-content: space-around;
     align-items: center;
-    background-color:green;
+    background-color:#04AA6D;
     color: white;
 }
+
 .logo{
     height : 65px;
-    width : 65px;
+    width : 75px;
+}
+.logo-text-box {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: rgb(5, 5, 5);
+    margin-left: -150px;
+}
+.logo-text-box span {
+    margin-left: 20px;
 }
 
 li {

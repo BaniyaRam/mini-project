@@ -1,6 +1,6 @@
 
-   * body{
-        background-color:#eee;
+   body{
+        background-color:rgb(255, 255, 255);
     }
     h4{
         text-align: center;
@@ -9,8 +9,13 @@
         font-weight: bold;
     }
     .map{
-        text-align: center;
+        text-align: center;;
     }
+
+    .map iframe {
+        box-shadow: 0 0 30px 10px #ddd;
+    }
+
     .desc .name{
         font-size: 22px;
         font-weight: bold;

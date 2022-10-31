@@ -2,9 +2,9 @@
 if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         $username = $_SESSION['username'];
         $id = $_SESSION['id'];
-        echo "Welcome, $username";
-}else {
-    echo "Login First!";
+        echo "<div class='remove'><span class='m1'>Welcome</span><span class='m2'>$username</span></div>";
+} else {
+}
     ?>
         <div class="slider">
             <a href="#"><img class="img1 images" src="./includes/image1.jpg"></a>
@@ -14,5 +14,4 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             <a href="#"><img class="img5 images" src="./includes/image5.jpg"></a>
         </div>
     <?php
-}
 ?>

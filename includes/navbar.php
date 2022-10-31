@@ -14,6 +14,7 @@ session_start();
     <body>
     <nav class="navbar">
         <div><img class="logo" src = "logo.png"></div>
+        <div class="logo-text-box">Miras<br><span>Futsal</span></div>
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
