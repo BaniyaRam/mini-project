@@ -38,13 +38,10 @@ const seeTime = async (e) => {
     const btnLabel = document.querySelectorAll('.btbox')
     for (btn of btnLabel) {
         if (str.includes(btn.value)) {
-            const label = btn.nextSibling.nextSibling
-            label.classList.add('strike')
+            console.log(btn.value)
             btn.setAttribute('disabled', '')
         } else {
             btn.removeAttribute('disabled')
-            const label = btn.nextSibling.nextSibling
-            label.classList.remove('strike')
         }
     }
 }

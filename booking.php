@@ -9,10 +9,12 @@ require './vendor/PHPMailer/src/SMTP.php';
 
 ?>
 <link rel="stylesheet" href="./css/booking.css">
+<link rel="stylesheet" href="./css/styles.css">
 <script src='./js/booking.js' defer></script>
 <?php
 include_once './db.inc.php';
-include './includes/navbar.php';
+session_start();
+// include './includes/navbar.php';
 if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
     echo "
     <button> 
