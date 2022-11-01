@@ -1,14 +1,13 @@
 <?php
 session_start();
 require_once './db.inc.php';
-if (isset($_POST['registration'])) {
+if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
     $phone_number = $_POST['phone_number'];
 
     $query = "INSERT INTO users (username, email, `password`, phone_number) VALUES ('$username', '$email', '$password', '$phone_number');";
-    print_r($query);
     $result = mysqli_query($conn, $query);
     if ($result) {
         echo "<script>alert('Register Successfull')</script>";
@@ -44,7 +43,7 @@ if (isset($_POST['registration'])) {
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="email" name="username" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" name="username" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Phone Number</label>

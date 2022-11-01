@@ -33,13 +33,14 @@ if(mysqli_num_rows($result) > 0){
         $time = $row['time'];
         $date = $row['date'];
         $status = $row['status'];
+        $message = $status ? 'Confirmed' : 'Not Confirmed';
         echo "
         <tr>
             <td>$booking_id</td>
             <td>$user_id</td>
             <td>$time</td>
             <td>$date</td>
-            <td>$status</td>
+            <td>$message</td>
             <td>
             <button onclick='cancel($booking_id)' class='show_btn'>Cancel</button>
             </td>

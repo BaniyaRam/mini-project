@@ -1,3 +1,13 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require './vendor/PHPMailer/src/Exception.php';
+require './vendor/PHPMailer/src/PHPMailer.php';
+require './vendor/PHPMailer/src/SMTP.php';
+
+?>
 <link rel="stylesheet" href="./css/booking.css">
 <script src='./js/booking.js' defer></script>
 <?php
@@ -45,18 +55,36 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
 
 if (isset($_POST['book_btn'])) {
     $date = $_POST['date'];
-    $time = implode(",", $_POST['bookingTime']);
+    $time = $_POST['bookingTime'];
     $user_id = $_SESSION['id'];
-
-    $query = "INSERT INTO booking (time, date, user_id) VALUES ('$time', '$date', $user_id);";
-    print_r($query);
-
-    $result = mysqli_query($conn, $query);
+    foreach ($time as $t){
+        $query = "INSERT INTO booking (time, date, user_id) VALUES ('$t', '$date', $user_id);";
+        $result = mysqli_query($conn, $query);
+    }
     if ($result) {
-        echo "<script>
-        alert('Booking success')
-        window.location.href = 'index.php'
-        </script>";
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'be2019se676@gces.edu.np';
+        $mail->Password   = '';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+        $mail->setFrom('be2019se676@gces.edu.np');
+        $mail->addAddress($email);
+        $mail->isHTML(true);
+        $mail->Subject = "Booking Register";
+        $mail->Body = "Hello";
+        try {
+            $mail->send();
+            echo "<script>alert('Booking successfull');
+            alert('Booking success')
+            window.location.href = 'index.php'
+            </script>";
+        } catch (Exception $e) {
+            echo "<script>alert('Something went wrong. Please try again');</script>";
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        }
     } else {
         echo "<script>alert('Failed')</script>";
     }
