@@ -7,3 +7,17 @@
   text-decoration: none;
   color: black;
 }
+.field-container{
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding-top: 30px;
+}
+.field-container label{
+  color: white
+
+}
+.field-container input{
+  font-size: 30px;
+}

@@ -23,13 +23,12 @@ session_start();
         <div class="navbar-links">
           <ul>
             <li><a href="https://www.facebook.com/mirasfutsal" target="_blank">OUR FACEBOOK</a></li>
-            <li><a href="#">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <?php
             if (isset($_SESSION['username'])) {
                 echo '<li><a href="booking.php">BOOKINGS</a></li>';
             }
 ?>
-            <li><a href="#">LIVE EVENTS</a></li>
             <li><a href="contactus.php">ABOUT US</a></li>
             <?php
 if (!isset($_SESSION["username"])) {

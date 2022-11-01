@@ -1,3 +1,4 @@
+
 <?php
 if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         $username = $_SESSION['username'];
@@ -15,3 +16,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
     <?php
 ?>
+
+<div class='next_body'>
+    <div class='title'>Futsal Court Gallery</div>
+    <div class='gallery'>
+
+    </div>
+</div>

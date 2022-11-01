@@ -20,12 +20,12 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
     </button>";
     ?>
 <div class="field-container">
-<br><br>
+<br>
     <form method="post">
-        <label>Date<br><input type="date" name="date" 
+        <label>Date<br><br><input type="date" name="date"
             min="<?php echo date("Y-m-d"); ?>" 
             class="selectDate" onchange="seeTime(this)">
-        </label><br><br>
+        </label><br>
         <label>Time</label><br>
         <div class="bookingTimes">
         <?php
@@ -67,18 +67,20 @@ if (isset($_POST['book_btn'])) {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'be2019se676@gces.edu.np';
-        $mail->Password   = '';
+        $mail->Password   = 'yhaaekjukbehyoar';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
         $mail->setFrom('be2019se676@gces.edu.np');
-        $mail->addAddress($email);
+        $mail->addAddress('subasbaniya16@gmail.com');
         $mail->isHTML(true);
         $mail->Subject = "Booking Register";
-        $mail->Body = "Hello";
+        $times = implode(",", $time);
+        $mail->Body = "Hello, Subash
+                    USERID $user_id
+                    Booked Time: $times";
         try {
             $mail->send();
             echo "<script>alert('Booking successfull');
-            alert('Booking success')
             window.location.href = 'index.php'
             </script>";
         } catch (Exception $e) {

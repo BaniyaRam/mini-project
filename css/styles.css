@@ -3,10 +3,8 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('../includes/turf3.jpg');
-    background-size: cover;
+    background-color: rgb(28,33,29);
+
 }
 
 .remove {
@@ -89,13 +87,18 @@ label{
 .slider {
     margin-left: 15vw;
     margin-top: 40px;
+    position: relative;
 }
 
 .images {
     position: absolute;
+    margin-top: 50px;
     min-width: 600px;
     width: 70vw;
     height: 70vh;
     display: block;
     animation: fadeIn 5s;
+    box-shadow: 0 0 10px #04AA6D;
+    border-radius: 10px;
 }
+

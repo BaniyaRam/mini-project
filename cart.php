@@ -19,7 +19,6 @@ $result = mysqli_query($conn, $query);
     <table>
         <tr>
             <th>Booking ID</th>
-            <th>UserId</th>
             <th>Time</th>
             <th>Date</th>
             <th>Status</th>
@@ -29,7 +28,6 @@ $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
         $booking_id = $row['booking_id'];
-        $user_id = $row['user_id'];
         $time = $row['time'];
         $date = $row['date'];
         $status = $row['status'];
@@ -37,7 +35,6 @@ if(mysqli_num_rows($result) > 0){
         echo "
         <tr>
             <td>$booking_id</td>
-            <td>$user_id</td>
             <td>$time</td>
             <td>$date</td>
             <td>$message</td>
