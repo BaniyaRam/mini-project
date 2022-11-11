@@ -3,10 +3,10 @@
 }
 
 body {
-    background-color: rgb(28,33,29);
-
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
-
 .remove {
     position: absolute;
     width: 100vw;
@@ -84,6 +84,11 @@ label{
     background: gray;
 }
 
+.kicks{
+    width: 100%; 
+    height:auto;
+
+}
 .slider {
     margin-left: 15vw;
     margin-top: 40px;
@@ -100,5 +105,9 @@ label{
     animation: fadeIn 5s;
     box-shadow: 0 0 10px #04AA6D;
     border-radius: 10px;
+}
+.gallery{
+    width: 4vw;
+    height: 4vh;
 }
 

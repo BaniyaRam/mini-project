@@ -1,9 +1,10 @@
 <?php
 
-include_once './includes/navbar.php';
+require './includes/navbar.php';
 
-include_once './includes/body.php';
+require './includes/body.php';
 
+require './includes/footer.php';
 ?>
 
 <script src="./js/popup.js"></script>

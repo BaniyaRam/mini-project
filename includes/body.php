@@ -7,19 +7,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
 } else {
 }
     ?>
-        <div class="slider">
-            <a href="#"><img class="img1 images" src="./includes/image1.jpg"></a>
-            <a href="#"><img class="img2 images" src="./includes/image2.jpg"></a>
-            <a href="#"><img class="img3 images" src="./includes/image3.jpg"></a>
-            <a href="#"><img class="img4 images" src="./includes/image4.jpg"></a>
-            <a href="#"><img class="img5 images" src="./includes/image5.jpg"></a>
-        </div>
+    <body>
+        <div class="background-body">
+            <img class="kicks" src="./assests/bimg1.jpg" />
+        </div>  
+    </body>
     <?php
 ?>
-
-<div class='next_body'>
-    <div class='title'>Futsal Court Gallery</div>
-    <div class='gallery'>
-
-    </div>
-</div>

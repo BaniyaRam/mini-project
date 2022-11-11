@@ -6,9 +6,12 @@
 .show_btn {
   text-decoration: none;
   color: black;
+  justify-content: center;
+  align-items: center;
+  display: block;
 }
 .field-container{
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center; 
@@ -19,5 +22,9 @@
 
 }
 .field-container input{
-  font-size: 30px;
+  font-size: 20px;
+}
+
+input:disabled {
+  cursor: no-drop;
 }

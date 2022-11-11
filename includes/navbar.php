@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" href="background_styles.css">
+      <!-- <link rel="stylesheet" href="background_styles.css"> -->
       <link rel="stylesheet" href="./css/styles.css">
       <link rel="stylesheet" href="./css/navbar.css">
       <script src="./js/script.js" defer></script>

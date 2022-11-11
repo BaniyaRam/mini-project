@@ -50,9 +50,7 @@ if (isset($_POST['admin_submit'])) {
             if (($row['password']) == $password) {
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['role'] = 'admin';
-                echo '<script>alert("Login Successfully")</script>';
-                sleep(2);
-                header('Location: index.php');
+                header('Location: Customers/Display.php');
             } else {
                 echo "Incorrect password";
             }
