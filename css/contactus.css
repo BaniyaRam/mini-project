@@ -1,6 +1,6 @@
 
    body{
-        background-color:rgba(1, 7, 10, 0.856);
+    background: linear-gradient(to top, #58151A, #BC2909, #BA6D09, #71A8EE, #3072EB, #1552C6, #0542A8);;
     }
     h4{
         text-align: center;
@@ -16,6 +16,10 @@
 
     .map iframe {
         box-shadow: 0 0 30px 10px rgb(11, 12, 12);
+    }
+    .desc{
+        text-align: center;
+        margin: 4rem;
     }
 
     .desc .name{

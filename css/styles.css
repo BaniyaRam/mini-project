@@ -1,11 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
+    min-height: 200vh;
+    background: linear-gradient(to top, #58151A, #BC2909, #BA6D09, #71A8EE, #3072EB, #1552C6, #0542A8);
+}
+
+main {
+    min-height: 120vh;
     margin: 0;
     padding: 0;
+    background-image: url(../assests/bimg1.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.title {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: .5rem;
+
 }
 .remove {
     position: absolute;
@@ -83,31 +103,36 @@ label{
     display: none;
     background: gray;
 }
-
-.kicks{
-    width: 100%; 
-    height:auto;
-
-}
-.slider {
-    margin-left: 15vw;
-    margin-top: 40px;
-    position: relative;
+.main {
+    border: 2px solid red;
 }
 
-.images {
-    position: absolute;
-    margin-top: 50px;
-    min-width: 600px;
-    width: 70vw;
-    height: 70vh;
-    display: block;
-    animation: fadeIn 5s;
-    box-shadow: 0 0 10px #04AA6D;
-    border-radius: 10px;
-}
-.gallery{
-    width: 4vw;
-    height: 4vh;
+.container {
+    display: flex;
+    margin: 3rem;
+    gap: 2rem;
+    flex-flow: row wrap;
 }
 
+figure {
+    width: min(100%, 300px);
+    border: 2px solid gray;
+    background-color:gray;
+    
+    ;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.name {
+    font-size: 2rem;
+    margin-left: 1rem;
+    font-family: 'Dancing Script', cursive;
+    color: linear-gradient(to top, #58151A, #BC2909, #BA6D09, #71A8EE, #3072EB, #1552C6, #0542A8);
+}

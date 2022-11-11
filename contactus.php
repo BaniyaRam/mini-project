@@ -16,7 +16,7 @@
        <br><label class="name"> Miras Futsal Pvt Ltd</b> </label><br>
        <span>7X5F+J93, Lamachaur Rd, Pokhara 33700</span><br>
        <br><f class="oph">Operating Hours</f></span><br>
-        <span>6:00am to 6:00pm</span><br><br>
+        <span>6:00am to 7:00pm</span><br><br>
         <label>Contact</label><br>
         <span> 061-440500, +977-9806602731 ,+977-9817161612</span>
     </div>
