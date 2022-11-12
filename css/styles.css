@@ -116,11 +116,9 @@ label{
 
 figure {
     width: min(100%, 300px);
-    border: 2px solid gray;
-    background-color:gray;
-    
-    ;
-    border-radius: 1rem;
+    /* border: 2px solid gray; */
+    /* background-color:gray; */
+    /* border-radius: 1rem; */
     padding: .5rem;
 }
 

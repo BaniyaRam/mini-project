@@ -22,19 +22,25 @@
         </div>
         <div class="container">
             <figure>
-                <img src="./assests/IMG_5710.JPG" alt="photo">
+                <img src="./assests/aa1.JPG" alt="photo">
             </figure>
             <figure>
-                <img src="./assests/IMG_5726.JPG" alt="photo">
+                <img src="./assests/aa2.JPG" alt="photo">
             </figure>
             <figure>
-                <img src="./assests/IMG_5726.JPG" alt="photo">
+                <img src="./assests/aa3.JPG" alt="photo">
             </figure>
             <figure>
-                <img src="./assests/IMG_5726.JPG" alt="photo">
+                <img src="./assests/aa4.JPG" alt="photo">
             </figure>
             <figure>
-                <img src="./assests/IMG_5726.JPG" alt="photo">
+                <img src="./assests/aa5.JPG" alt="photo">
+            </figure>
+            <figure>
+                <img src="./assests/aa7.JPG" alt="photo">
+            </figure>
+            <figure>
+                <img src="./assests/aa8.JPG" alt="photo">
             </figure>
         </div>
     </div>
