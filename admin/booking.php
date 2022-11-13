@@ -31,7 +31,7 @@ if(mysqli_num_rows($result) > 0){
         $time = $row['time'];
         $date = $row['date'];
         $status = $row['status'];
-        $message = $status ? "Confirmed" : "Not Confirmed   <button onclick='observe($booking_id)'>Confirm</button>";
+        $message = $status ? "Confirmed" : "Not Confirmed  <button onclick='observe($booking_id)'>Confirm</button>";
         echo "
         <tr>
             <td>$booking_id</td>
@@ -61,8 +61,7 @@ if(isset($_GET['cancel'])){
     $result = mysqli_query($conn, $query);
 
     if($result){
-        echo 'done';
-        header('Location: admin/booking?done');
+        header("refresh: 3;");
     }else {
         echo 'failed';
     }

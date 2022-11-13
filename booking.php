@@ -68,11 +68,11 @@ if (isset($_POST['book_btn'])) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'be2019se676@gces.edu.np';
-        $mail->Password   = 'yhaaekjukbehyoar';
+        $mail->Username   = 'samirparajuli2000@gmail.com';
+        $mail->Password   = 'gukwmqubblvbhywb';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
-        $mail->setFrom('be2019se676@gces.edu.np');
+        $mail->setFrom('samirparajuli2000@gmail.com');
         $mail->addAddress('subasbaniya16@gmail.com');
         $mail->isHTML(true);
         $mail->Subject = "Booking Register";

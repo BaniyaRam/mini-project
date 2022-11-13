@@ -93,7 +93,7 @@ label{
     background: #ff7200;
 
 }
-.register {
+/* .register {
     border: 1px solid black;
     position: absolute;
     width: 50%;
@@ -101,8 +101,8 @@ label{
     margin-top: 100px;
     z-index: 6;
     display: none;
-    background: gray;
-}
+    background: gray; */
+
 .main {
     border: 2px solid red;
 }
@@ -133,4 +133,43 @@ figure img {
     margin-left: 1rem;
     font-family: 'Dancing Script', cursive;
     color: linear-gradient(to top, #58151A, #BC2909, #BA6D09, #71A8EE, #3072EB, #1552C6, #0542A8);
+}
+.form{
+    text-decoration: none;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    background: black;
+    height: auto;
+    box-sizing: border-box;
+    color: whitesmoke;
+    padding-left:  800px;
+    size: 10px;
+
+}
+.form h3{
+    padding-left:-1000px;
+    margin: 0px;
+    
+    color: #0542A8;
+
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+footer {
+    background-color: #B82E1F;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    bottom: 0;
+    padding: .2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
 }

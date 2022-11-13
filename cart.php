@@ -38,9 +38,13 @@ if(mysqli_num_rows($result) > 0){
             <td>$time</td>
             <td>$date</td>
             <td>$message</td>
-            <td>
-            <button onclick='cancel($booking_id)' class='show_btn'>Cancel</button>
-            </td>
+            <td>";
+            if(!$status){
+                echo "<button onclick='cancel($booking_id)' class='show_btn'>Cancel</button>";
+            }else {
+                echo "<button 'class='show_btn' disabled>Cancel</button>";
+            }
+            echo "</td>
         </tr>";
     }
 }else {

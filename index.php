@@ -4,7 +4,7 @@ require './includes/navbar.php';
 
 require './includes/body.php';
 
-// require './includes/footer.php';
+require './includes/footer.php';
 ?>
 
 <script src="./js/popup.js"></script>
