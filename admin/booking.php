@@ -57,6 +57,18 @@ if(mysqli_num_rows($result) > 0){
 <?php
 if(isset($_GET['cancel'])){
     $booking_id = $_GET['cancel'];
+    $query = "DELETE FROM Booking WHERE booking_id=$booking_id";
+    $result = mysqli_query($conn, $query);
+
+    if($result){
+        header("refresh: 3;");
+    }else {
+        echo 'failed';
+    }
+}
+
+if(isset($_GET['observe'])){
+    $booking_id = $_GET['cancel'];
     $query = "UPDATE booking SET status=1 where booking_id=$booking_id";
     $result = mysqli_query($conn, $query);
 

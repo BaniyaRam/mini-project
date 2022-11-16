@@ -1,0 +1,62 @@
+.show-bookings {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    top: 150px;
+    left: 20px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    word-spacing: 5px;
+    background-color: #ff7200;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.show-bookings:hover {
+    background-color: #DD5000;
+}
+
+.bookings-made {
+    position: absolute;
+    top: 183px;
+    left: 20px;
+    max-height: 350px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 300px;
+    visibility: hidden;
+    border-radius: 10px;
+}
+
+.td {
+    width: 150px;
+    position: relative;
+}
+
+.td, .th {
+    padding: 5px;
+    text-align: center;
+    vertical-align: center;
+    background-color: rgba(36, 74, 243, 0.5);
+    font-weight: bold;
+}
+
+.th {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.booking-bar {
+    display: flex;
+}
+
+.no-bookings {
+    padding: 20px;
+    text-align: center;
+    vertical-align: center;
+    background-color: rgba(36, 74, 243, 0.5);
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+}
